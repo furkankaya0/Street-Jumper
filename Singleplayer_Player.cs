@@ -35,22 +35,22 @@ public class Singleplayer_Player : MonoBehaviour
     const string ENEMY_KICK = "Enemy_Kick";
     const string PLAYER_KNOCKDOWN = "Player_KnockDown";
 
+    //Time Calculation
+    public Text TimeText;
+    public static float TimeCount;
+    public bool timerIsRunning = false;
     /*GameUI
     public GameObject StartPanel;
     public Text Timer;
     public GameObject Victory;
     public GameObject GameOver;
-    public bool timerIsRunning = false;
 
-    //Time Calculation
-    public Text TimeText;
-    public static float TimeCount;
 
     //Sounds
     public AudioSource RunningS;
     public AudioSource JumpingS;
     public AudioSource StreetS;*/
-    //ý
+    //Ä±
 
     public static int placement;
     public static int StartWait;
@@ -77,16 +77,17 @@ public class Singleplayer_Player : MonoBehaviour
         //reset = false;
         resetlendi = 0;
         checkpoint = 0;
-        //
+        
         
 
-        /*Time
-        /timerIsRunning = true;
-        TimeCount = 0;*/
+        //Time
+        timerIsRunning = true;
+        TimeCount = 0;
 
         //view = GetComponent<PhotonView>();
 
     }
+
     public void Update()
     {
 
@@ -155,13 +156,14 @@ public class Singleplayer_Player : MonoBehaviour
         // TIME CONTROL
         //......................................
         //.......................................
-        /*if (timerIsRunning)
+        if (timerIsRunning)
         {
 
-                TimeCount += Time.deltaTime;
-                DisplayTime(TimeCount);
-        }*/
+            TimeCount += Time.deltaTime;
+            TimeDisplay(TimeCount);
+        }
     }
+
     void ChangeAnimationState(string newAnimation)
     {
         if (currentAnimation == newAnimation) return;
@@ -170,6 +172,7 @@ public class Singleplayer_Player : MonoBehaviour
         currentAnimation = newAnimation;
 
     }
+
     public void FixedUpdate()
     {
         // CHARACTER MOVEMENTS CONTROL
@@ -301,48 +304,12 @@ public class Singleplayer_Player : MonoBehaviour
 
         }
     }
-
-
-
-
-    /*private void OnTriggerEnter(Collider other)
+    void TimeDisplay(float TimeToDisplay2)
     {
-        Debug.Log("Çalýþýyor");
+        TimeToDisplay2 += 1;
 
-            if (Input.GetKey(KeyCode.C) && _charController.isGrounded && moveSpeed < 0.08f)
-            {
-                ChangeAnimationState(ENEMY_PUNCH);
-                OpRb.velocity =v_movement* 1;
-                Debug.Log("buda çaliþiyor");
+        float minutes1 = Mathf.FloorToInt(TimeToDisplay2 / 60);
+        float seconds1 = Mathf.FloorToInt(TimeToDisplay2 % 60);
 
-            }
-            else if (Input.GetKey(KeyCode.V) && _charController.isGrounded && moveSpeed < 0.08f)
-            {
-                ChangeAnimationState(ENEMY_KICK);
-                OpRb.AddForce(v_movement);
-            }
-
-    }*/
-
-
-
-    // TIME DISPLAYYY, SECOND AND MINUTES COUNTER
-    /*public void DisplayTime(float TimeToDisplay)
-    {
-        TimeToDisplay += 1;
-
-        float minutes = Mathf.FloorToInt(TimeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(TimeToDisplay % 60);
-
-        TimeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-    }*/
-
-    /*public void PassToLevel2()
-    {
-        if(placement>=2)
-        {
-            SceneManager.LoadScene(3);
-        }
-    }*/
-}
-
+        TimeText.text = string.Format("{0:00}:{1:00}", minutes1, seconds1);
+    }
