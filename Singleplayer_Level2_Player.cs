@@ -386,23 +386,3 @@ public class Singleplayer_Level2_Player : MonoBehaviour
     }
 }
 
-// COMMENTS
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Çalışıyor");
-
-            if (Input.GetKey(KeyCode.C) && _charController.isGrounded && moveSpeed < 0.08f)
-            {
-                ChangeAnimationState(ENEMY_PUNCH);
-                OpRb.velocity =v_movement* 1;
-                Debug.Log("buda çalişiyor");
-
-            }
-            else if (Input.GetKey(KeyCode.V) && _charController.isGrounded && moveSpeed < 0.08f)
-            {
-                ChangeAnimationState(ENEMY_KICK);
-                OpRb.AddForce(v_movement);
-            }
-
-    }*/
-
