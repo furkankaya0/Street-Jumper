@@ -34,7 +34,7 @@ public class Singleplayer_Level2_Player : MonoBehaviour
     const string PLAYER_KNOCKDOWN = "Player_KnockDown";
 
     //GameUI
-    public GameObject StartPanel;
+    //public GameObject StartPanel;
     private Text Timer;
     private int StartWait;
     public GameObject Victory;
@@ -62,7 +62,7 @@ public class Singleplayer_Level2_Player : MonoBehaviour
         Victory.gameObject.SetActive(false);
         GameOver.gameObject.SetActive(false);
 
-        StartWait = 5;
+        StartWait = 2;
         gravity = 0.5f;
         jumpForce = 0.13f;
 
@@ -85,15 +85,15 @@ public class Singleplayer_Level2_Player : MonoBehaviour
 
     void Update()
     {
-        if (StartWait == 0)
+        /*if (StartWait == 0)
         {
-            StartPanel.gameObject.SetActive(false);
+            //StartPanel.gameObject.SetActive(false);
             StopCoroutine(SWait());
         }
         else
         {
-            StartPanel.gameObject.SetActive(true);
-        }
+            //StartPanel.gameObject.SetActive(true);
+        }*/
         //FINISH LINE
         if (placement == 1)
         {
@@ -107,8 +107,8 @@ public class Singleplayer_Level2_Player : MonoBehaviour
             GameOver.gameObject.SetActive(true);
 
         }
-        string SW = StartWait.ToString();
-        Timer.text = SW;
+        //string SW = StartWait.ToString();
+        //Timer.text = SW;
 
 
         //ANIMATION CONTROL
@@ -301,22 +301,13 @@ public class Singleplayer_Level2_Player : MonoBehaviour
                 resetlendi = 0;
             }
         }
-
-        
-
-
-
-
-
-
-
     }
 
     IEnumerator SWait()
     {
-        if (StartWait == 5)
+        if (StartWait == 2)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i <2; i++)
             {
                 yield return new WaitForSeconds(1);
                 StartWait = StartWait - 1;
@@ -326,6 +317,7 @@ public class Singleplayer_Level2_Player : MonoBehaviour
 
         }
     }
+    
 
     IEnumerator Delay()
     {
@@ -340,24 +332,7 @@ public class Singleplayer_Level2_Player : MonoBehaviour
         currentAnimation = newAnimation;
     }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Çalýþýyor");
 
-            if (Input.GetKey(KeyCode.C) && _charController.isGrounded && moveSpeed < 0.08f)
-            {
-                ChangeAnimationState(ENEMY_PUNCH);
-                OpRb.velocity =v_movement* 1;
-                Debug.Log("buda çaliþiyor");
-
-            }
-            else if (Input.GetKey(KeyCode.V) && _charController.isGrounded && moveSpeed < 0.08f)
-            {
-                ChangeAnimationState(ENEMY_KICK);
-                OpRb.AddForce(v_movement);
-            }
-
-    }*/
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Return")
@@ -399,9 +374,6 @@ public class Singleplayer_Level2_Player : MonoBehaviour
         }
         
 
-
-
-
     }
     void TimeDisplay(float TimeToDisplay2)
     {
@@ -413,4 +385,24 @@ public class Singleplayer_Level2_Player : MonoBehaviour
         TimeText.text = string.Format("{0:00}:{1:00}", minutes1, seconds1);
     }
 }
+
+// COMMENTS
+    /*private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Ã‡alÄ±ÅŸÄ±yor");
+
+            if (Input.GetKey(KeyCode.C) && _charController.isGrounded && moveSpeed < 0.08f)
+            {
+                ChangeAnimationState(ENEMY_PUNCH);
+                OpRb.velocity =v_movement* 1;
+                Debug.Log("buda Ã§aliÅŸiyor");
+
+            }
+            else if (Input.GetKey(KeyCode.V) && _charController.isGrounded && moveSpeed < 0.08f)
+            {
+                ChangeAnimationState(ENEMY_KICK);
+                OpRb.AddForce(v_movement);
+            }
+
+    }*/
 
