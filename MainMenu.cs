@@ -12,18 +12,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
     public GameObject creditsScreen;
     public GameObject MainMenuScreen;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+ 
     public void StartGame()
     {
         SceneManager.LoadScene(2);
@@ -54,8 +43,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
     }
     public void MainMenuScene()
     {
-        SceneManager.LoadScene(2);
-        PhotonNetwork.LoadLevel("Main Menu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void LobbyScene()
@@ -102,7 +90,6 @@ public class MainMenu : MonoBehaviourPunCallbacks
     public void SingleplayerLevel2()
     {
         SceneManager.LoadScene("SingleplayerLevel2");
-
     }
 
     
