@@ -63,9 +63,9 @@ There are 2 number of players in our game and the players will compete simultane
 
 In the settings and help panel of our game, there are audio settings, video settings, gameplay settings, and close settings. There are keys to move our character in the gameplay settings and we make a few tutorial descriptions about how to play the game.
 
-## PHOTOS OF THE STREET JUMPER
+## In-Game Images of STREET JUMPER
 ![logo](https://user-images.githubusercontent.com/97740231/151029230-ad515eba-0165-4285-b9e7-84ffbc825405.png)
-7ab9.png)
+
 ![Opening](https://user-images.githubusercontent.com/97740231/150644259-6a5e02d6-17d5-4fdf-b833-eaa63f7718a4.png)
 ![Login](https://user-images.githubusercontent.com/97740231/150644255-0f77e9c5-4fe4-47bc-971c-8ebab15fe5f4.png)
 ![Main Menu Scene](https://user-images.githubusercontent.com/97740231/150644256-79ff0bdb-5902-4613-9952-29085ce27cf3.png)
@@ -75,5 +75,4 @@ In the settings and help panel of our game, there are audio settings, video sett
 ![Similation Selection](https://user-images.githubusercontent.com/97740231/150644268-c75f1f85-2d79-49dc-a1ef-f400c9584cb4.png)
 ![Similation 1](https://user-images.githubusercontent.com/97740231/150644265-a49d343f-0231-468f-8309-20397af2eb51.png)
 ![Similation 2](https://user-images.githubusercontent.com/97740231/150644267-7c712663-f343-4088-bc24-28dddeb625e3.png)
-![Credits](https://user-images.githubusercontent.com/97740231/151028831-b7ad5339-ced8-4cf7-b979-0383c47e
-
+![Credits](https://user-images.githubusercontent.com/97740231/151028831-b7ad5339-ced8-4cf7-b979-0383c47e7ab9.png)
