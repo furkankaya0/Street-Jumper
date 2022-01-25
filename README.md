@@ -75,5 +75,4 @@ In the settings and help panel of our game, there are audio settings, video sett
 ![Similation Selection](https://user-images.githubusercontent.com/97740231/150644268-c75f1f85-2d79-49dc-a1ef-f400c9584cb4.png)
 ![Similation 1](https://user-images.githubusercontent.com/97740231/150644265-a49d343f-0231-468f-8309-20397af2eb51.png)
 ![Similation 2](https://user-images.githubusercontent.com/97740231/150644267-7c712663-f343-4088-bc24-28dddeb625e3.png)
-![Credits](https://user-images.githubusercontent.com/97740231/150644272-2ca0f274-aa31-4a3d-8a67-b19996047dfc.png)
-
+![Credits](https://user-images.githubusercontent.com/97740231/151028831-b7ad5339-ced8-4cf7-b979-0383c47e7ab9.png)
