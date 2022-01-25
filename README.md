@@ -50,7 +50,9 @@ We used fences and thin timber passages and streetlights from this asset store t
 ######  **Physics** 
 
 ● Moving forward,backward, left and right
+
 ● Jumping 
+
 ● Gravity
 
 ###### **Multiplayer option details**
